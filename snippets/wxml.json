@@ -1,0 +1,74 @@
+{
+/*
+	 // Place your snippets for HTML here. Each snippet is defined under a snippet name and has a prefix, body and 
+	 // description. The prefix is what is used to trigger the snippet and the body will be expanded and inserted. Possible variables are:
+	 // $1, $2 for tab stops, ${id} and ${id:label} and ${1:label} for variables. Variables with the same id are connected.
+	 // Example:
+	 "Print to console": {
+		"prefix": "log",
+		"body": [
+			"console.log('$1');",
+			"$2"
+		],
+		"description": "Log output to console"
+	}
+*/
+
+	"view": {
+		"prefix": "view",
+		"body": "<view class=\"${className}\">${content}</view>"
+	},
+
+	"scroll-view":　{
+		"prefix": "scroll",
+		"body": [
+			"<scroll-view scroll-x=\"${x}\" scroll-y=\"${y}\" >",
+			"  ${view}",
+			"</scroll-view>"
+		]
+	},
+
+	"swiper": {
+		"prefix": "swiper",
+		"body": [
+			"<swiper ${indicator-dots} ${autoplay} ${interval=\"5000\"} ${duration=\"1000\"} ${current=\"0\"} ${bindchange=\"\"}>",
+			"  <block wx:for=\"{{${list}}}\">",
+			"    <swiper-item>",
+			"      ${item}",
+			"    </swiper-item>",
+			"  </block>",
+			"</swiper>"
+		]
+	},
+
+	"icon": {
+		"prefix": "icon",
+		"body": "<icon type=\"${success}\" size=\"${size}\" color=\"${color}\"/>"
+	},
+
+	"text": {
+		"prefix": "text",
+		"body": "<text class=\"${className}\">${content}</text>"
+	},
+
+	"progress": {
+		"prefix": "progress",
+		"body": "<progress percent=\"20\" ${show-info} ${stroke-width=\"\"} ${color=\"\"} ${active=\"false\"} />",
+		"description": "percent:Float 百分比0~100;  show-info:Boolean 在进度条右侧显示百分比;  stroke-width:Number 进度条线的宽度，单位px;  color:String 进度条颜色;  active:Boolean 进度条从左往右的动画;"
+	},
+
+	"button": {
+		"prefix": "button",
+		"body": [
+			"<button ${type=\"default\"}",
+			"		${size=\"defaultSize\"}",
+			"		${loading=\"loading\"}",
+			"		${plain=\"plain\"}",
+        	"		${disabled=\"disabled\"}",
+			"		${bindtap=\"default\"}",
+			"		${hover-class=\"other-button-hover\"}>",
+			"  ${content}",
+			"</button>${2}"
+		]
+	}
+}
